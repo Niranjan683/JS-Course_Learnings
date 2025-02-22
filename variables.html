@@ -7,13 +7,36 @@
 </head>
 <body>
     <script>
-        let variable1 = 3;
+        // The valriable names can't start with numbers, keywords, special chars.
+        // 3 ways to create a variable let, const, var.
+        // typically const and let are use to create a variable. the disadvantage of var is it doesn't follow the scope
+        let variable1 = 3; // assigning the variable
+        console.log(variable1);
+        variable1=33; // re-assigning the variable
         console.log(variable1)
         
-        let  calc= 5+5;
-        console.log(calc)
-        console.log(calc+2)
+        const  calc= 5+5;
+        console.log(calc);
+        console.log(calc+2);
+        console.log(calc + " hi");
 
-</script>
+
+        let name = "niranjan";
+        console.log(name);
+        
+        const variable2 =70;
+        console.log(variable2);
+        ///variable2 = 70; // this give error we can't reassign the const value
+        //console.log(variable2);
+        
+        var valriable3 = 88;
+        console.log(valriable3)
+
+        let variable4= 8.8;
+        // typeof() used to find the type of the variables
+        console.log(typeof(variable1)) // number
+        console.log(typeof(name))// string
+        console.log(typeof(variable4)) //number
+    </script>
 </body>
 </html>

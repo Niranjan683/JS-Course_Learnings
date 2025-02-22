@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        //console.log(5 > 10); // false
+        //console.log(5 == 5); // true
+        //console.log(5 === 5); // true  
+        //console.log(5 == '5'); // true
+        //console.log(5 === '5'); // false
+        //console.log(5 + 5 > 11); // 5 + 5 = 10 then 10 > 11 ---> false 
+
+    /*  if (false) {
+            console.log("hello world");
+        }else{
+            console.log('happy world');
+        }
+
+        const age =20;
+
+        if (age<=18){
+            console.log("You can't Drive")
+        }else if (age<=25){
+            console.log("go to driving school")
+        }else{
+            console.log("You can Drive")
+        }
+
+        if (5){
+            console.log('true')
+        }
+        if(''){
+        }else{
+            console.log(false)
+        }
+        if ('ab'){
+            console.log(true)
+        }
+
+        if ('text'/10){  // the ('text'/10) returns NaN (Not a Number)
+        }else{
+            console.log(false)
+        }
+
+        let variable ;
+        console.log(variable)  // undefined
+        if (variable){
+        }else{
+            console.log('undefined')
+        }
+    */
+
+
+        //ternary operator for if else statement 
+        // syntax ---> var_name = true ? 'truthy' : 'falsy'
+        const result = true ? 'truthy' : 'falsy';
+        console.log(result)
+        const vals = 30>5 ? 30 : 5;
+        console.log(vals)
+
+        // Guard Operator : &&
+        false && console.log('hello')
+
+        const message = 5 && 'hello' 
+        console.log (message) //hello
+
+        // default operator : ||
+        //const currency = 'EUR' || 'USD';
+        ///console.log(currency)// EUR
+
+
+        const currency = undefined || 'USD';
+        console.log(currency)// USD
+    </script>
+</body>
+</html>

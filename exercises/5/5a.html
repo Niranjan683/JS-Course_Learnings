@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button onclick="calculation+='1'; console.log(calculation)">1</button>
+
+    <button onclick="calculation+='2'; console.log(calculation)">2</button>
+
+    <button onclick="calculation+='3'; console.log(calculation)">3</button>
+
+    <button onclick="calculation+='+'; c6onsole.log(calculation)">+</button>
+
+    <button onclick="
+        //Note : eval() takes a string and runs it as a code
+        // Avoid using eval() in real world projects  since it can potentially be given harmful code to run.
+        //Only use eval() for learning purpose.
+        calculation = eval(calculation);
+        console.log (calculation);
+        console.log(typeof(calculation))
+    ">=</button>
+
+    <script>
+        let calculation = ''
+        //calculation+=5
+        //console.log(calculation) 5
+        //console.log(typeof(calculation)) string
+        
+    </script>
+</body>
+</html>
