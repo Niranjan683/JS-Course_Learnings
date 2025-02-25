@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <button onclick="console.log('Cart_Quantity: '+cart_quantity)">Show Quantity</button>
+    <button onclick="
+        if(cart_quantity+1 >10){
+            alert('the cart is full')
+        }else {
+            cart_quantity++;
+            console.log('Cart_Quantity: '+cart_quantity)
+        }
+    ">+1</button>
+
+    <button onclick="
+    if(cart_quantity+2 >10){
+        alert('the cart is full')
+    }else {
+        cart_quantity+=2;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">+2</button>
+
+    <button onclick="
+    if(cart_quantity+3 >10){
+        alert('the cart is full')
+    }else {
+        cart_quantity+=3;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">+3</button>
+
+    <button onclick="
+    if(cart_quantity+4 >10){
+        alert('the cart is full')
+    }else {
+        cart_quantity+=4;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">+4</button>
+
+    <button onclick="
+    if(cart_quantity+5 >10){
+        alert('the cart is full')
+    }else {
+        cart_quantity+=5;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">+5</button>
+
+    <button onclick="
+    if(cart_quantity-1 < 0){
+        cart_quantity = 0;
+    }else {
+        cart_quantity--;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">-1</button>
+    
+    <button onclick="
+    if(cart_quantity-2 < 0){
+        cart_quantity=0;
+    }else {
+        cart_quantity-=2;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">-2</button>
+
+    <button onclick="
+    if(cart_quantity-3 < 0){
+        cart_quantity=0;
+    }else {
+        cart_quantity-=3;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">-3</button>
+
+    <button onclick="
+    if(cart_quantity-4 < 0){
+        cart_quantity=0;
+    }else {
+        cart_quantity-=4;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">-4</button>
+
+    <button onclick="
+    if(cart_quantity-5 < 0){
+        cart_quantity=0;
+    }else {
+        cart_quantity-=5;
+        console.log('Cart_Quantity: '+cart_quantity)
+    }
+    ">-5</button>
+
+    <button onclick="cart_quantity = 0; console.log('cart was reset: '+cart_quantity)">Reset Cart</button>
+    <script>
+        let cart_quantity = 0;
+    </script>
+</body>
+</html>
