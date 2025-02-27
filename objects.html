@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // Objects---> An Objects groups multiple values together 
+        // objects let ys group multiple values together
+        //objects let us use multipel values together
+
+
+/*      const product = {
+            name:'socks', // where name is a property. socks is a value
+            price : 1000,// where price  is a property. 1000 is a value
+        };
+        console.log(typeof product)//Object
+        console.log(product);//Object { name: "socks", price: 1000 
+        console.log(product.name); // socks
+        console.log(product.price);//1000
+        console.log(product.priced);// undefined ---> this will be shown when the property doesn't exist in the object
+
+        product.name = 'shoes'; // changing the value of the property
+        console.log(product);
+
+        product.lays=2;// adding a new property to the object with values
+        console.log(product) //Object { name: "shoes", price: 1000, lays: 2 }
+        console.log (product.lays);// 2
+
+        delete product.lays; 
+*/
+
+        const product2 = {
+            name:'shirt',
+            'delivery-time': '1 day', // we would use [] to create a property with -,+,...
+            ratings:{         // nested objects
+                stars: 4.5,
+                count: 509,
+            },
+
+            func: function function1() {
+                console.log('function inside the object');
+            },
+        
+        };
+        console.log(product2)//Oject {name:'shirt'}
+        console.log(product2.name)//shirt
+        console.log(product2['name'])//shirt
+        console.log(product2['delivery-time'])// 1 day
+
+        console.log(product2.ratings) //Object { stars: 4.5, count: 509 }
+        console.log(product2.ratings.stars) // 4.5
+        console.log(product2.ratings.count) // 509
+
+        product2.func()
+
+        console.log(typeof product2.func) // fuction
+        console.log(typeof console) //fuction
+        console.log(typeof console.log) // fuction
+
+        // Buit in Objects----> console, Math, JSON, localstorage
+
+        /* JSON Built-In Object
+            JSON - Java Script Object Notation
+                 - it is a syntax
+                 - similar to Javascript Object
+                 - but has less features
+                 - it does not support the functions as a property's values
+                 - all properties and strings must use double quotes
+                 - the built-in object allows us to convert the Javascript object to JSON
+        */
+
+
+        // converting JavaScript Object to JSON
+        console.log(JSON.stringify(product2)); //{"name":"shirt","delivery-time":"1 day","ratings":{"stars":4.5,"count":509}}
+        console.log(typeof JSON.stringify(product2));// string
+
+        // converting JSON to Javascript object
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+
+
+        /* localStorage built-in Object
+        localStorage - used to save values more permanently
+                     - it only supports the strings
+
+        */
+    </script>
+</body>
+</html>
