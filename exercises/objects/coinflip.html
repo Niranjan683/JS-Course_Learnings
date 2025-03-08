@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=" pred('heads')">heads</button>
+    <button onclick="pred('tails')">tails</button>
+    <script>
+        
+        const counts = JSON.parse(localStorage.getItem('counts'))|| {wins:0, losses:0};
+        function pred(guess){
+            const Prob = Math.random();
+            console.log(Prob);
+            let result;
+            if (Prob<=0.5){
+                result = 'tails';
+            }else{
+                result = 'heads'
+            }
+
+            
+            if (guess===result){
+                console.log("You've Won")
+                console.log(Prob)
+                counts.wins += 1;
+            }else{
+                console.log("You've Lost")
+                console.log(Prob)
+                counts.losses += 1;
+            }
+
+            localStorage.setItem('counts',JSON.stringify(counts));
+            console.log(counts);
+
+        }
+    </script>
+</body>
+</html>

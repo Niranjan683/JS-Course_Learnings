@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>obj</title>
+</head>
+<body>
+    <script>
+        const baseketball = {price: 2095};
+        console.log(baseketball);
+        baseketball.price +=500;
+        console.log(baseketball);
+        baseketball['deliverytime']='3 days';
+        console.log(baseketball);
+
+
+        function function1(product1,product2){
+            return(product1.name===product2.name && product1.price === product2.price)
+        }
+        product1={name: 'basketball',price : 500};
+        product2={name:'cricket bat',price : 600};
+        product3={name: 'basketball', price: 500};
+        console.log(function1(product1,product2));
+
+        console.log('Good Morning'.toLowerCase());
+        console.log('TESTING'.toLowerCase())
+
+        console.log('hello'.repeat(2));
+        console.log('test'.repeat(2))
+    </script>
+</body>
+</html>
