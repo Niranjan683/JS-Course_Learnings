@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  class="cost" placeholder="enter the cost">
+    <button class="calculate-button" onclick="Calculate()">calculate</button>
+    <p class="show-total-cost"></p>
+    <script>
+        function Calculate(){
+            let cost = Number(document.querySelector(".cost").value)*100;
+            document.querySelector('.show-total-cost').innerHTML = `$${(cost+1000)/100}`;
+
+        }
+    </script>
+</body>
+</html>

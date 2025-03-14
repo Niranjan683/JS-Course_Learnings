@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyDown and KeyUp Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #output {
+            font-size: 24px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Press and Release a Key to See the Effect</h2>
+    <p id="output">Press any key...</p>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("output").textContent = "Key Down: " + event.key;
+        });
+
+        document.addEventListener("keyup", function(event) {
+            document.getElementById("output").textContent = "Key Up: " + event.key;
+        });
+    </script>
+
+</body>
+</html>
