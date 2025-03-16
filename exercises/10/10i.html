@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        
+        .number-button{
+            background-color: rgb(44, 44, 44);
+            padding: 18px 25px;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 80px;
+            margin: 0px 5px;
+        }
+
+        .operator-button{
+            background-color: rgb(255, 123, 0);
+            border: none;
+            font-size: 18px;
+            padding: 18px 25px;
+            border-radius: 80px;
+            margin: 0px 5px;
+
+        }
+
+        .clear-button{
+            background-color: rgb(44, 44, 44);
+            padding: 20px 15px;
+            color: white;
+            font-size: 10px;
+            border: none;
+            border-radius: 80px;
+            margin: 0px 5px;            
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button  class="number-button" onclick="
+            updateCalculation('1')
+        ">1</button>
+
+        <button  class="number-button" onclick="
+            updateCalculation('2')
+        ">2</button>
+
+        <button  class="number-button" onclick="
+            updateCalculation('3')
+        ">3</button>
+
+        <button class="operator-button" onclick="
+            updateCalculation('+')
+        ">+</button>
+
+    </p>
+
+
+
+    <p>
+        <button  class="number-button" onclick="
+            updateCalculation('4')
+        ">4</button>
+
+        <button  class="number-button" onclick="
+            updateCalculation('5')
+        ">5</button>
+
+        <button  class="number-button" onclick="
+            updateCalculation('6')
+        ">6</button>
+
+        <button class="operator-button" onclick="
+            updateCalculation('-')
+        ">-</button>
+
+    </p>
+
+
+    <p>
+        <button  class="number-button" onclick="
+            updateCalculation('7')
+        ">7</button>
+
+        <button     class="number-button" onclick="
+            updateCalculation('8')
+        ">8</button>
+
+        <button class="number-button" onclick="
+            updateCalculation('9')
+        ">9</button>
+
+        <button class="operator-button" onclick="
+            updateCalculation('*')
+        ">*</button>
+
+    </p>
+
+    <p>
+        <button class="number-button" onclick="updateCalculation(0)">0</button>
+
+        <button class="number-button" onclick="updateCalculation('.')"> . </button>
+        <button  class="number-button" onclick="
+            //Note :eval() takes a string adn runs it as code.
+            //avoid using eval() in real world project since
+            //it can potentially be given harmful code to run
+            // only use eval() for learning purpose
+            calculate(calculation);
+            console.log(calculation);
+            ">=</button>
+        <button  class="operator-button"  onclick="updateCalculation('/')">/</button>
+
+    </p>
+
+    <p>
+        <button class="clear-button" onclick="calculation = ''; console.log(calculation);localStorage.setItem('calculation',calculation)">Clear</button>
+    </p>
+
+    <p class="answers"></p>
+
+    <script>
+        let calculation = localStorage.getItem('calculation') || '';
+        function updateCalculation(value){
+            calculation += value;
+            //console.log(calculation);
+            document.querySelector('.answers').innerHTML=calculation;
+            localStorage.setItem('calculation',calculation)
+        }
+
+        function calculate(calculation){
+            document.querySelector('.answers').innerHTML+=`= ${eval(calculation)}`
+        }
+    </script>
+</body>
+</html>
