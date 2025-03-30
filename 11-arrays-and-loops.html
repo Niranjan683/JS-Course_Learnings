@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loops</title>
+</head>
+<body>
+    <script>
+        const myArray=[10, 20, 30, 40];
+        console.log(myArray);
+        myArray[0]=80;
+        console.log(myArray);
+        /*
+        const myArray1=[10, 'hello', true, {name: 'socks'},[1,2]] // we can store different types values in array like python's list
+        console.log(typeof myArray1[1]) //string
+        console.log([1,2])// Object
+        console.log(Array.isArray([1,2]))//true   we will use Array.isarray() to specifically check the value is an array
+
+        console.log(myArray1.length)
+
+
+        myArray.push(100) // the push is similar to python's append used to append the value at the end
+        console.log(myArray)
+        
+        console.log('popeped ',myArray.pop())// the pop is used to pop the last value of aa array. pop returns the value
+
+        console.log(myArray);
+        console.log(myArray.splice(0,2));// the splice element also returns removed value as an array
+        // syntax for splice: array_name.splice( start_index_value, number of values to remove from the start index )
+
+        console.log(myArray)    
+    */
+
+    
+    
+    
+    let i= 1;
+    while(i<=5){
+        console.log(i);
+        i++;
+    }
+
+    for (let i =1; i<=5;i++){
+        console.log(i)
+    }
+
+    // when to use standard and non standard loop
+    // for -----> standard situation
+    // while -----> non-standard situation
+
+    // example for non-standard situation for while loop
+    let randomNumber=0;
+    while (randomNumber<0.5){
+        randomNumber = Math.random();
+    }
+    console.log(randomNumber);
+
+
+    const todoList = ['make dinner', 'wash dishes', 'watch youtube'];
+
+    for (let i = 0; i<todoList.length; i++){
+        console.log(todoList[i]);
+        console.log(i);
+    }
+
+
+
+    const nums = [1,2,3,4,5,6];
+    let total = 0;
+
+    for (let i =0; i<nums.length; i++){
+        total+=nums[i];
+    }
+    console.log(total);
+
+    /*const List = [1,1,2];
+    for (let i=0; i<List.length; i++){
+        List[i]=List[i]*2;
+    }
+    console.log(List);*/
+
+    const numsDoubled = [];
+    for (let i = 0; i<nums.length;i++){
+        const num = nums[i];
+        numsDoubled.push(num*2);
+    }
+    console.log(numsDoubled);
+
+
+
+
+    </script>
+</body>
+</html>
