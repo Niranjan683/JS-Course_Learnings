@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const arr= [10,5,37,8];
+        MinMax(arr)
+        function MinMax(arr){
+            const minmax = {min:null, max:null};
+            for (let i =0; i< arr.length; i++){
+                if (minmax.min>arr[i] || minmax.min===null){
+                    minmax.min = arr[i];
+                }
+                if (minmax.max<arr[i] || minmax.max===null){
+                    minmax.max=arr[i]
+                }
+            }
+            console.log(minmax);
+        }
+    </script>
+</body>
+</html>

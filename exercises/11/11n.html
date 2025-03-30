@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const arr= ['apple','orange','apple','apple']
+
+        const wordCounts = {}
+        
+        function countWord(arr){
+            for (let i = 0; i<arr.length; i++){
+                if (!wordCounts[arr[i]]){
+                    wordCounts[arr[i]]= 1;
+                }else{
+                    wordCounts[arr[i]]++
+                }
+            }
+        console.log(wordCounts)
+        //console.log(wordCounts['apple'])
+
+        }
+        countWord(arr)
+
+        /*
+        const List = ['search','hello','world','good','search'];
+        let index = -1;
+        function findSearch(arr,index){
+            for (let i =0; i<arr.length; i++){
+                //console.log(arr[i])
+                if (arr[i]==='search'){
+                    index=i;
+                    break;
+                }
+            }
+            return index;
+        }
+        
+        console.log(findSearch(List,index));
+        */
+
+
+        const List = ['search','hello','world','good','search'];
+        let index = -1;
+        function findSearch(arr,index){
+            for (let i =0; i<arr.length; i++){
+                //console.log(arr[i])
+                if (arr[i]==='search'){
+                    index=i;
+                    break;
+                }
+            }
+            return index;
+        }
+    </script>
+</body>
+</html>
