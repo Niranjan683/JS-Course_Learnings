@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findIndex(arr,value){
+            for(let i =0; i<arr.length; i++){
+                if (arr[i]===value){
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function unique(arr){
+            const uniqueArr=[];
+            for (let i=0; i<arr.length; i++){
+                if (findIndex(uniqueArr,arr[i])){
+                    uniqueArr.push(arr[i]);
+                }
+            }
+            return uniqueArr;
+        }
+
+        const arr=['bob','jack','newton','jon','bob','newton'];
+        console.log(unique(arr));
+    </script>
+</body>
+</html>

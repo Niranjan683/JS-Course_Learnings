@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods){
+            const removedEggs = [];
+            let c= 0;
+            for (let i = 0; i<foods.length;i++){
+                if (foods[i]==='egg' && c<2){
+                    c++;
+                    continue;
+                }
+                removedEggs.push(foods[i]);
+            }   
+            return removedEggs.reverse()
+        }
+        let foods=['egg','apple','egg','egg','ham'];
+       // let fd= foods
+        //console.log(foods.reverse())// the reverse function actually modifies the original list
+        //console.log(fd)
+        console.log(removeEgg(foods.reverse()))
+
+
+    </script>
+</body>
+</html>
